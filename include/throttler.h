@@ -2,14 +2,14 @@
 
 #include <chrono>
 
-namespace Utilities
+namespace SS
 {
 class Throttler
 {
 public:
-    Throttler(const unsigned maxInterval, std::chrono:seconds waitIntervalSecs) :
-        : mMaxRatePerInterval(waitIntervalSecs)
-        , mMaxWaitInterval(duration)
+    Throttler(const unsigned maxInterval, std::chrono::seconds waitIntervalSecs)
+        : mMaxRatePerInterval(maxInterval)
+        , mMaxWaitInterval(waitIntervalSecs)
     {}
 
 template <typename Function>
